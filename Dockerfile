@@ -37,13 +37,9 @@ FROM alpine:latest
 ARG FUSE_THREAD_STACK=320000
 ENV FUSE_THREAD_STACK $FUSE_THREAD_STACK
 
-RUN apk add --no-cache --purge -uU \
-  fuse \
-  libstdc++
+RUN apk add --no-cache --purge -uU fuse libstdc++
 
 COPY --from=builder /rar2fs/rar2fs /usr/local/bin/rar2fs
-
-STOPSIGNAL SIGQUIT
 
 ENTRYPOINT [ "rar2fs" ]
 

@@ -57,3 +57,11 @@ docker run \
   /source \
   /destination
 ```
+
+## Build
+
+```bash
+sudo docker build . -t rar2fs
+docker tag rar2fs carlba/rar2fs
+docker push carlba/rar2fs
+```
