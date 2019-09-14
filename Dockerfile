@@ -43,4 +43,4 @@ COPY --from=builder /rar2fs/rar2fs /usr/local/bin/rar2fs
 
 ENTRYPOINT [ "rar2fs" ]
 
-CMD [ "-f", "-o", "allow_other", "-o", "auto_unmount", "--seek-length=1", "/source", "/destination" ]
+CMD [ "-f", "-o", "allow_other", "-o", "auto_unmount", "-o", "gid=100", "--seek-length=1", "/source", "/destination" ]
