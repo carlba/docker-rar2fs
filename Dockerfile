@@ -12,8 +12,8 @@ RUN apk add --no-cache --update-cache --upgrade \
   make \
   tar
 
-ARG UNRAR_VERSION=7.1.3
-ARG RAR2FS_VERSION=1.29.7
+ARG UNRAR_VERSION=6.0.3
+ARG RAR2FS_VERSION=1.29.4
 
 RUN curl --location --remote-name --remote-header-name "https://www.rarlab.com/rar/unrarsrc-$UNRAR_VERSION.tar.gz"
 RUN curl --location --remote-name --remote-header-name "https://github.com/hasse69/rar2fs/archive/refs/tags/v$RAR2FS_VERSION.tar.gz"
